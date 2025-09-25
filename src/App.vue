@@ -78,10 +78,14 @@
     </footer>
   </div>
 
+  <ChatBubbleModal/>
 </template>
 
 <script>
+import ChatBubbleModal from "@/components/support/ChatBubbleModal.vue";
+
 export default {
+  components: {ChatBubbleModal},
   computed: {
     currentUser() {
       return this.$store.state.auth.user;
