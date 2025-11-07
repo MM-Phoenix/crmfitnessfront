@@ -1,34 +1,20 @@
 <template>
   <!-- Floating button -->
-  <button
-      class="chat-fab"
-      @click="toggle"
-      :aria-expanded="open.toString()"
-      aria-controls="chat-modal"
-  >
+  <button class="chat-fab" @click="toggle">
     💬
   </button>
 
-  <!-- Overlay + modal -->
+  <!-- Chat Modal -->
   <transition name="fade">
-    <div
-        v-if="open"
-        class="overlay"
-        @click.self="close"
-        role="dialog"
-        aria-modal="true"
-        id="chat-modal"
-    >
+    <div v-if="open" class="overlay" @click.self="close">
       <transition name="scale">
-        <div class="modal" @keydown.escape.prevent="close" tabindex="-1">
-          <!-- Header -->
+        <div class="modal">
           <header class="modal-header">
             <h2>Support Chat</h2>
             <button class="close-btn" @click="close">✕</button>
           </header>
 
-          <!-- Messages -->
-          <div class="messages" ref="messagesEl">
+          <div class="messages" ref="messagesBox">
             <div
                 v-for="(m, i) in messages"
                 :key="i"
@@ -38,22 +24,14 @@
             </div>
           </div>
 
-          <!-- Composer -->
           <form class="composer" @submit.prevent="send">
             <input
                 v-model="draft"
                 class="input"
                 type="text"
                 placeholder="Type a message..."
-                :disabled="loading"
             />
-            <button
-                class="send-btn"
-                type="submit"
-                :disabled="loading || !draft.trim()"
-            >
-              {{ loading ? "..." : "Send" }}
-            </button>
+            <button class="send-btn" type="submit">Send</button>
           </form>
         </div>
       </transition>
@@ -62,58 +40,29 @@
 </template>
 
 <script setup>
-import { ref, nextTick } from "vue";
+import { ref, nextTick, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
 import Constants from "@/api/Constants";
+import WebSocketAPI from "@/api/WebSocketAPI";
 
 const open = ref(false);
 const draft = ref("");
 const messages = ref([
   { from: "bot", text: "👋 Hello! How can I help you today?" },
 ]);
-const loading = ref(false);
 const messagesBox = ref(null);
+
+let wsClient = null;
 
 function toggle() {
   open.value = !open.value;
   if (open.value) {
-    nextTick(scrollToBottom);
+    nextTick(() => scrollToBottom());
   }
 }
 
 function close() {
   open.value = false;
-}
-
-async function send() {
-  const text = draft.value.trim();
-  if (!text) return;
-
-  // Add user message
-  messages.value.push({ from: "user", text });
-  draft.value = "";
-  scrollToBottom();
-
-  loading.value = true;
-  try {
-    // GET request with axios
-    const res = await axios.get(Constants.SUPPORT_URL + "message", {
-      params: { text },
-      responseType: "text", // ensure raw string response
-    });
-
-    // If backend sends plain text, Axios wraps it in res.data
-    const reply = res.data;
-    messages.value.push({ from: "bot", text: reply });
-    scrollToBottom();
-  } catch (err) {
-    messages.value.push({
-      from: "bot",
-      text: "⚠️ Error contacting server.",
-    });
-  } finally {
-    loading.value = false;
-  }
 }
 
 function scrollToBottom() {
@@ -122,7 +71,43 @@ function scrollToBottom() {
     if (el) el.scrollTop = el.scrollHeight;
   });
 }
+
+async function send() {
+  const text = draft.value.trim();
+  if (!text) return;
+
+  messages.value.push({ from: "user", text });
+  draft.value = "";
+  scrollToBottom();
+
+  try {
+    const res = await axios.get(Constants.SUPPORT_URL + "message", {
+      params: { text },
+      responseType: "text",
+    });
+
+    messages.value.push({ from: "bot", text: res.data });
+  } catch (e) {
+    messages.value.push({ from: "bot", text: "⚠️ Server error." });
+  } finally {
+    scrollToBottom();
+  }
+}
+
+onMounted(() => {
+  console.log("Web socket starting...")
+  wsClient = WebSocketAPI;
+  wsClient.connectWebSocket((body) => {
+    messages.value.push({ from: "bot", text: body });
+    scrollToBottom();
+  });
+});
+
+onBeforeUnmount(() => {
+  if (wsClient) wsClient.disconnect();
+});
 </script>
+
 
 <style scoped>
 /* Floating button */
