@@ -87,7 +87,7 @@ a:hover {
 }
 
 .button-border-transition:hover {
-    background-color: #1E252B !important;
+    background-color: #1e252b !important;
     color: #f1f1f1 !important;
     border-style: solid;
     border-width: 1px;
@@ -120,7 +120,7 @@ a:hover {
 .img-half-right-container {
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
 }
 
 .img-half-right-container::after {
