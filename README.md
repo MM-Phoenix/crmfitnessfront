@@ -1,6 +1,9 @@
 # crmfitnessweb
 
-## Project setup
+## Project setup1
+Для запуску crmfitnessfront проекту потрібно завантажити з репозиторія github executable файли для Windows (crmfitnessweb-win.exe) або для macOS (crmfitnessweb-macos) і запустити подвійним кліком миші.
+
+## Project setup2
 ```
 yarn install
 ```
