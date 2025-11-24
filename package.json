@@ -1,6 +1,19 @@
 {
   "name": "crmfitnessweb",
   "version": "0.1.0",
+  "bin" : "pkg.js",
+  "pkg": {
+    "scripts": [
+      "pkg.js",
+      "package.json"
+    ],
+    "assets": "dist/**/*",
+    "targets": [
+      "node18-macos-x64",
+      "node18-win-x64"
+    ],
+    "outputPath": "executable"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -20,7 +33,9 @@
     "axios": "^1.7.7",
     "bootstrap": "^4.6.2",
     "core-js": "^3.8.3",
+    "http-server": "^14.1.1",
     "jquery": "^3.7.1",
+    "pkg": "^5.8.1",
     "popper.js": "^1.16.1",
     "vee-validate": "^4.14.7",
     "vue": "^3.2.13",
