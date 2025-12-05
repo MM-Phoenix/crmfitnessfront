@@ -32,6 +32,7 @@ const routes = [
     {
         path: "/owner",
         name: "owner",
+        meta: {permissions: ["owner"]},
         // lazy-loaded
         component: AddAdmin,
     },
@@ -40,24 +41,28 @@ const routes = [
     {
         path: "/admin/client",
         name: "client",
+        meta: {permissions: ["owner", "admin"]},
         // lazy-loaded
         component: AddClient,
     },
     {
         path: "/admin/trainer",
         name: "admin",
+        meta: {permissions: ["owner", "admin"]},
         // lazy-loaded
         component: AddTrainer,
     },
     {
         path: "/admin/users",
         name: "SetUserSubscription",
+        meta: {permissions: ["owner", "admin"]},
         // lazy-loaded
         component: SetUserSubscription,
     },
     {
         path: "/admin/schedule",
         name: "ScheduleCreation",
+        meta: {permissions: ["owner", "admin"]},
         // lazy-loaded
         component: ScheduleCreation,
     },
@@ -65,6 +70,7 @@ const routes = [
     {
         path: "/trainer/schedule",
         name: "Schedule",
+        meta: {permissions: ["owner", "admin", "trainer"]},
         // lazy-loaded
         component: Schedule,
     },
@@ -114,9 +120,15 @@ router.beforeEach((to, from, next) => {
                         next();
                     }
                 } else {
+                    console.log('to.permissions: ', to.meta.permissions)
+
+                    console.log('Routers: ', routes);
+                    console.log('User: ', result.data.role.toLocaleLowerCase());
+
                     store.state.auth.user = result.data;
 
-                    if (authPages.includes(to.path)) {
+                    if (authPages.includes(to.path) ||
+                        (to.meta.permissions && !to.meta.permissions.includes(result.data.role.toLocaleLowerCase()))) {
                         next('/');
                     } else {
                         next();
