@@ -12,9 +12,9 @@
 
   <ModalComponent :isOpen="modalOpened" @modal-close="closeModal" name="first-modal">
     <template #header>
-      <div v-show="!isDateSelectable()">Training info</div>
+      <div v-show="!isDateSelectable()">Інформація про заняття</div>
       <div v-show="isDateSelectable()">
-        {{ ScheduleService.isUserScheduledEvent(selectedEvent.id) ? 'Signed up' : 'Training info' }}
+        {{ ScheduleService.isUserScheduledEvent(selectedEvent.id) ? 'Записаний' : 'Інформація про заняття' }}
       </div>
     </template>
     <template #content>
@@ -24,7 +24,7 @@
       <div>{{ selectedEvent.trainer }}</div>
       <div>{{ selectedEvent.training }}</div>
 
-      <div>Registrations count: {{ selectedEvent.registrations.length }}</div>
+      <div>Кількість записів: {{ selectedEvent.registrations.length }}</div>
     </template>
   </ModalComponent>
 </template>
@@ -39,7 +39,6 @@ import interactionPlugin from '@fullcalendar/interaction'
 import ModalComponent from "../ModalComponent";
 import UserAPI from "@/api/UserAPI";
 import ScheduleService from "@/services/schedule/ScheduleService";
-import AdminAPI from "@/api/AdminAPI";
 
 export default defineComponent({
   name: "Schedule",
@@ -50,6 +49,15 @@ export default defineComponent({
     return {
       eventGuid: 0,
       calendarOptions: {
+        locale: "uk",
+        allDayText: "Весь день",
+        buttonText: {
+          today: "Сьогодні",
+          month: "Місяць",
+          week: "Тиждень",
+          day: "День",
+          list: "Список"
+        },
         plugins: [
           dayGridPlugin,
           timeGridPlugin,

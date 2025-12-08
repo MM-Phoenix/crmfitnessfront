@@ -27,9 +27,9 @@ export default {
             userForm.setLoading(false);
 
             if (data.status === 200) {
-              userForm.setMessage("Your data has been updated", true);
+              userForm.setMessage("Ваші дані оновлені", true);
             } else {
-              userForm.setMessage("Something wrong. Talk to admin.");
+              userForm.setMessage("Щось пішло не так. Зверніться до адміністратора.");
             }
           },
           (error) => {

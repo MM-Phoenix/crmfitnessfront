@@ -3,7 +3,7 @@
   <div class="w3-container pfs-form-page-container">
     <hr>
     <div class="w3-center h2-input-container">
-      <h2>Add trainer</h2>
+      <h2>Додати тренера</h2>
     </div>
     <UserForm ref="userForm"/>
   </div>
@@ -27,9 +27,9 @@ export default {
             userForm.setLoading(false);
 
             if (data.status === 200) {
-              userForm.setMessage("Trainer has been created", true);
+              userForm.setMessage("Тренер додано", true);
             } else {
-              userForm.setMessage("Something wrong. Talk to admin.");
+              userForm.setMessage("Щось пішло не так. Зверніться до адміністратора.");
             }
           },
           (error) => {

@@ -10,7 +10,7 @@
       <transition name="scale">
         <div class="modal w3-responsive w3-card-4 col-md-12">
           <header class="modal-header">
-            <h3>Support Chat</h3>
+            <h3>Чат підтримки</h3>
             <button class="close-btn w3-button w3-hover-opacity-off button-learn-more" @click="close">✕</button>
           </header>
 
@@ -32,7 +32,7 @@
                 v-model="draft"
                 class="w3-input w3-border"
                 type="text"
-                placeholder="Type a message..."
+                placeholder="Введіть повідомлення..."
             />
             <button class="w3-button w3-hover-opacity-off button-learn-more" type="submit">Send</button>
           </form>
@@ -58,7 +58,7 @@ const draft = ref("");
 let isFirstMessage = ref(true);
 const messages = ref([
   {
-    from: "Assistant",
+    from: "Асистент",
     text: computed(() => {
       if (currentUser.value) {
         const role = currentUser.value.role || "";
@@ -66,20 +66,20 @@ const messages = ref([
 
         if (role.includes("OWNER")) {
           isFirstMessage.value = false;
-          return "👋 Hello, Owner " + name + "! Let's answer for some dump questions.";
+          return "👋 Вітаємо, Власнику " + name + "!";
         }
         if (role.includes("ADMIN")) {
           isFirstMessage.value = false;
-          return "👋 Hello, Admin " + name + "! Let's answer for some dump questions.";
+          return "👋 Вітаємо, Адміністраторе " + name + "!";
         }
         if (role.includes("TRAINER")){
           isFirstMessage.value = false;
-          return "👋 Hello, Trainer " + name + "! Let's answer for some dump questions.";
+          return "👋 Вітаємо, Тренере " + name + "!";
         }
-        if (role.includes("CLIENT")) return "👋 Hello, " + name + "! How can I help you today?";
+        if (role.includes("CLIENT")) return "👋 Вітаємо, " + name + "! Чим можемо вам допомогти?";
       }
 
-      return "👋 Hello! How can I help you today?";
+      return "👋 Вітаємо! Чим можемо вам допомогти?";
     }),
   },
 ]);
@@ -120,7 +120,7 @@ async function send() {
         params: {text},
         responseType: "text",
       });
-      messages.value.push({from: "Assistant", text: res.data});
+      messages.value.push({from: "Асистент", text: res.data});
     }
 
     if (wsClient && wsClient.stompClient) {
@@ -137,7 +137,7 @@ async function send() {
     }
 
   } catch (e) {
-    messages.value.push({from: "Assistant", text: "⚠️ Server error."});
+    messages.value.push({from: "Асистент", text: "⚠️ Server error."});
   } finally {
     scrollToBottom();
   }

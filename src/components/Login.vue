@@ -5,19 +5,19 @@
         <div class="w3-container pfs-form-page-container">
           <hr>
           <div class="w3-center h2-input-container">
-            <h2>Sign in</h2>
+            <h2>Вхід</h2>
           </div>
 
           <div class="w3-responsive w3-card-4 col-md-12">
             <div class="card-container w3-striped w3-bordered w3-margin w3-padding-large">
               <Form @submit="handleLogin" :validation-schema="schema">
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="email">Пошта</label>
                   <Field id="email" name="email" type="text" class="w3-input w3-border"/>
                   <ErrorMessage name="email" class="error-feedback"/>
                 </div>
                 <div class="form-group">
-                  <label for="password">Password</label>
+                  <label for="password">Пароль</label>
                   <Field id="password" name="password" type="password" class="w3-input w3-border"/>
                   <ErrorMessage name="password" class="error-feedback"/>
                 </div>
@@ -28,7 +28,7 @@
                 v-show="loading"
                 class="spinner-border spinner-border-sm"
             ></span>
-                    <span>Login</span>
+                    <span>Вхід</span>
                   </button>
                 </div>
 
@@ -59,8 +59,8 @@ export default {
   components: {UserForm, Form, Field, ErrorMessage,},
   data() {
     const schema = yup.object().shape({
-      email: yup.string().required("Email is required!"),
-      password: yup.string().required("Password is required!"),
+      email: yup.string().required("Необхідно ввести пошту!"),
+      password: yup.string().required("Необхідно ввести пароль!"),
     });
 
     return {
@@ -87,13 +87,13 @@ export default {
       this.$store.dispatch("auth/login", user).then(
           () => {
             this.successful = true;
-            this.message = 'Welcome back! 👋🏻';
+            this.message = 'Раді вас знову бачити! 👋🏻';
             this.$router.push("/");
           },
           (error) => {
             this.loading = false;
             this.successful = false;
-            this.message = 'Oops, something went wrong... 🫣';
+            this.message = 'Oops, щось пішло не так... 🫣';
           }
       );
     },

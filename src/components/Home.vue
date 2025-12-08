@@ -4,41 +4,36 @@
     <div class="w3-display-left w3-text-white" style="padding:48px">
       <span class="w3-jumbo w3-hide-small">Private Fitness Services</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Private Fitness Services</span><br>
-      <span class="w3-large">Start automating processes in your fitness club right now.</span>
+      <span class="w3-large">Почніть автоматизувати процеси у своєму фітнес-клубі вже зараз.</span>
       <p><a href="#about"
-            class="button-learn-more w3-button  w3-padding-large w3-margin-top w3-hover-opacity-off">Learn
-        more and start today</a></p>
+            class="button-learn-more w3-button  w3-padding-large w3-margin-top w3-hover-opacity-off">Дізнайтеся більше і розпочніть зараз!</a></p>
     </div>
   </div>
 
   <!--   About Section-->
   <div class="w3-container" style="padding:128px 16px" id="about">
-    <h3 class="w3-center">ABOUT PFS</h3>
-    <p class="w3-center w3-large">Key features of our company</p>
+    <h3 class="w3-center">ПРО PFS</h3>
+    <p class="w3-center w3-large">Ключові особливості нашої компанії</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
       <div class="w3-quarter">
         <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-        <p class="w3-large">Progressive</p>
-        <p>Designed to help your business expand, maintaining comprehensive records, engaging with customers with
-          guaranteed success.</p>
+        <p class="w3-large">Прогресивність</p>
+        <p>Створено для того, щоб допомогти вашому бізнесу розширюватися, зберігаючи комплексний облік, взаємодіючи з клієнтами гарантований успіх.</p>
       </div>
       <div class="w3-quarter">
         <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Caring</p>
-        <p>We will help your clients get from the ground to the stars with your programs and constant supervision of our
-          experts and team.</p>
+        <p class="w3-large">Турботливість</p>
+        <p>Допоможемо вашим клієнтам пройти шлях від землі до зірок завдяки вашим програмам і постійному нагляду за нашими експертами та командою.</p>
       </div>
       <div class="w3-quarter">
         <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Professional</p>
-        <p>Our expert fitness services are tailored to your company’s needs, enhancing employee health and driving
-          business success.</p>
+        <p class="w3-large">Професійність</p>
+        <p>Допоможемо вашим клієнтам перейти від землі до зірок завдяки вашим програмам і постійному нагляду за нашими експерти та команда.</p>
       </div>
       <div class="w3-quarter">
         <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Supportive</p>
-        <p>We provide personalized fitness support to help your team grow, creating a healthy and positive work
-          environment.</p>
+        <p class="w3-large">Підтримка</p>
+        <p>Надаємо персоналізовану фітнес-підтримку, щоб допомогти вашій команді розвиватися, створюючи здорову та позитивну роботу середовище.</p>
       </div>
     </div>
   </div>
@@ -48,19 +43,17 @@
     <div class="w3-row-padding">
       <div class="w3-col m6">
         <div style="vertical-align: center">
-          <h3>We got you!</h3>
-          <p>Boost your team's productivity and well-being with our tailored corporate<br>fitness programs.
-            For a limited time, get 20% off your first month! Invest in health, see results in performance - contact us
-            today to get started!</p>
+          <h3>Ми з вами!</h3>
+          <p>Підвищте продуктивність і добробут вашої команди за допомогою наших індивідуальних корпоративних фітнес-програм. На обмежений час отримайте знижку 20% у перший місяць! Інвестуйте в здоров'я, дивіться результати в результатах — зв'яжіться з нами вже сьогодні, щоб почати!</p>
           <div class="content-list-container">
             <ol>
-              <li>personal accounts for administrators, trainers, clients</li>
-              <li>easy schedule management</li>
-              <li>fast registrations and cancel</li>
-              <li>easy season tickets management</li>
+              <li>особисті акаунти для адміністраторів, тренерів, клієнтів</li>
+              <li>легке управління розкладом</li>
+              <li>швидка реєстрація та скасування</li>
+              <li>легке управління абонементами</li>
             </ol>
           </div>
-          <p><a href="#contact" class="w3-button button-border-transition">Get started!</a></p>
+          <p><a href="#contact" class="w3-button button-border-transition">Розпочнемо!</a></p>
         </div>
       </div>
       <div class="w3-col m6 img-half-right-container">
@@ -73,19 +66,19 @@
   <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" id="statistics">
     <div class="w3-quarter">
       <span class="w3-xxlarge">150+</span>
-      <br>Businesses
+      <br>Бізнесів
     </div>
     <div class="w3-quarter">
       <span class="w3-xxlarge">15+</span>
-      <br>Investors
+      <br>Інвесторів
     </div>
     <div class="w3-quarter">
       <span class="w3-xxlarge">150M</span>
-      <br>Happy Clients
+      <br>Задоволених Клієнтів
     </div>
     <div class="w3-quarter">
       <span class="w3-xxlarge">10+</span>
-      <br>Different Countries
+      <br>Різних Країн
     </div>
   </div>
 
@@ -93,26 +86,20 @@
   <div class="w3-container w3-light-grey w3-padding-64" id="skills">
     <div class="w3-row-padding">
       <div class="w3-col m6">
-        <h3>Our Skills.</h3>
-        <p style="margin-top: 10px">Our tailored programs boost energy levels, reduce stress, and improve focus,
-          leading to enhanced productivity and collaboration. Your team will feel more motivated,
-          healthier, and ready to perform at their best every day.</p>
-        <p style="margin-top: 10px">Our fitness services foster a positive, inclusive culture that promotes well-being
-          and
-          team spirit. By prioritizing employee health, you demonstrate a commitment to their well-being,
-          which improves job satisfaction and also reduces turnover. A healthier, happier
-          team is more loyal and engaged.</p>
+        <h3>Наші навички.</h3>
+        <p style="margin-top: 10px">Наші індивідуальні програми підвищують рівень енергії, знижують стрес і покращують концентрацію, що веде до підвищення продуктивності та співпраці. Ваша команда відчує більшу мотивацію, здоровішими і готовими щодня виступати на найкращому рівні.</p>
+        <p style="margin-top: 10px">Наші фітнес-послуги формують позитивну, інклюзивну культуру, яка сприяє добробуту і командний дух. Ставлячи здоров'я працівників на перше місце, ви демонструєте відданість їхньому добробуту, що підвищує задоволеність роботою і зменшує плинність кадрів. Здоровіший, щасливіший Команда більш лояльна і залучена.</p>
       </div>
       <div class="w3-col m6">
-        <p class="w3-wide"><i class="fa fa-gears w3-margin-right"></i>Automatization</p>
+        <p class="w3-wide"><i class="fa fa-gears w3-margin-right"></i>Автоматизація</p>
         <div class="w3-grey">
           <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
         </div>
-        <p class="w3-wide"><i class="fa fa-keyboard-o w3-margin-right"></i>Speed</p>
+        <p class="w3-wide"><i class="fa fa-keyboard-o w3-margin-right"></i>Швидкість</p>
         <div class="w3-grey">
           <div class="w3-container w3-dark-grey w3-center" style="width:85%">80%</div>
         </div>
-        <p class="w3-wide"><i class="fa fa-star w3-margin-right"></i>Service quality</p>
+        <p class="w3-wide"><i class="fa fa-star w3-margin-right"></i>Якість сервісу</p>
         <div class="w3-grey">
           <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
         </div>
@@ -122,10 +109,10 @@
 
   <div class="w3-center" style="margin-top: 6em; margin-bottom: 6em">
     <div>
-      <h1>Our locations</h1>
+      <h1>Наші локації</h1>
     </div>
     <div>
-      <p>We are the largest fitness service providers worldwide.</p>
+      <p>Ми є найбільшими постачальниками фітнес-послуг у світі.</p>
     </div>
     <div class="content-map-background">
       <div class="content-map-container">
@@ -135,185 +122,6 @@
       </div>
     </div>
   </div>
-  <!--  <script>-->
-  <!--    // Toggle between showing and hiding the sidebar when clicking the menu icon-->
-  <!--    var mySidebar = document.getElementById("mySidebar");-->
-
-  <!--    function w3_open() {-->
-  <!--      if (mySidebar.style.display === 'block') {-->
-  <!--        mySidebar.style.display = 'none';-->
-  <!--      } else {-->
-  <!--        mySidebar.style.display = 'block';-->
-  <!--      }-->
-  <!--    }-->
-
-  <!--    // Close the sidebar with the close button-->
-  <!--    function w3_close() {-->
-  <!--      mySidebar.style.display = "none";-->
-  <!--    }-->
-  <!--  </script>-->
-
-  <!--  <div class="w3-container">-->
-  <!--    <hr>-->
-  <!--    <div class="w3-center">-->
-  <!--      <h1>CRM Fitness</h1>-->
-  <!--      <h2>Best Private Services Program for Fitness Clubs</h2>-->
-  <!--      <h6>Designed to help your business expand, maintaining comprehensive records,-->
-  <!--        engaging with customers and devising effective marketing strategies.</h6>-->
-  <!--      <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>-->
-  <!--    </div>-->
-  <!--    <div class="content-background">-->
-  <!--      <div class="content-container">-->
-  <!--        <div class="content-centered-text-container">-->
-  <!--          <div>-->
-
-  <!--          </div>-->
-  <!--          <div>-->
-
-  <!--          </div>-->
-  <!--          <div class="content-small-text">-->
-  <!--            *14 days of free trial-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--        <div class="content-centered-button-container">-->
-  <!--          <a class="link link-is-button theme-dark-background" data-component-name="link" href="#down"-->
-  <!--             aria-label="Start Trial">-->
-  <!--            <span class="link-text" property="name">-->
-  <!--              Start Trial-->
-  <!--            </span>-->
-  <!--          </a>-->
-  <!--        </div>-->
-
-  <!--        <div class="content-image-list-container">-->
-  <!--          <div>-->
-  <!--            <div class="content-image-container">-->
-  <!--              <img src="resources/images/yoga.jpg"-->
-  <!--                   height="380"-->
-  <!--                   alt="PrivateFitnessServices" style="color: black; padding-left: 50px">-->
-  <!--            </div>-->
-  <!--            <div class="content-text-list-container">-->
-  <!--              <div>-->
-  <!--                <h2 class="content-h2">Tasks Solved by Private Fitness Services for Fitness Clubs</h2>-->
-  <!--                <div class="content-h3-and-list-container">-->
-  <!--                  <h3 class="content-h3">Web service for customers</h3>-->
-  <!--                  <div class="content-list-container">-->
-  <!--                    <ol>-->
-  <!--                      <li>collecting leads</li>-->
-  <!--                      <li>sales funnel management</li>-->
-  <!--                      <li>call plan and scheduling</li>-->
-  <!--                      <li>conversation scenarios</li>-->
-  <!--                      <li>task calendar and reminders</li>-->
-  <!--                    </ol>-->
-  <!--                  </div>-->
-  <!--                </div>-->
-  <!--                <div class="content-h3-and-list-container">-->
-  <!--                  <h3 class="content-h3">CRM-system</h3>-->
-  <!--                  <div class="content-list-container">-->
-  <!--                    <ol>-->
-  <!--                      <li>linking season tickets to specific locker room types (premium, standard, etc.)</li>-->
-  <!--                      <li>inclusion of additional services with predefined limits</li>-->
-  <!--                      <li>creation of both network-wide and local subscriptions</li>-->
-  <!--                      <li>flexible payment schedules for season tickets and cards</li>-->
-  <!--                      <li>setting up different types of subscriptions (membership fee, trial, additional)</li>-->
-  <!--                    </ol>-->
-  <!--                  </div>-->
-  <!--                </div>-->
-  <!--                <div class="content-h3-and-list-container">-->
-  <!--                  <h3 class="content-h3">Season Tickets and Cards</h3>-->
-  <!--                  <div class="content-list-container">-->
-  <!--                    <ol>-->
-  <!--                      <li>sale of season tickets</li>-->
-  <!--                      <li>convenient registration for training sessions</li>-->
-  <!--                      <li>personal client account</li>-->
-  <!--                      <li>free alerts for customers</li>-->
-  <!--                      <li>evaluation of coaches and clubs</li>-->
-  <!--                    </ol>-->
-  <!--                  </div>-->
-  <!--                </div>-->
-  <!--              </div>-->
-
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--        </div>-->
-
-  <!--        <div class="content-centered-text-container">-->
-  <!--          <div class="h1-content">-->
-  <!--            <h1>Why should you choose Private Services Program?</h1>-->
-  <!--          </div>-->
-  <!--          <div class="paragraph-content">-->
-  <!--            <p>We will help your clients get from the GROUND to the STARS with your programs.</p>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--        <div class="content-video-container">-->
-  <!--          <video class="content-video" width="100%" controls>-->
-  <!--            <source src="resources/video/swimmers.mp4" type="video/mp4">-->
-  <!--            Your browser does not support the video tag.-->
-  <!--          </video>-->
-  <!--        </div>-->
-  <!--        <div class="content-form-background-color" id="down">-->
-  <!--          <div class="content-centered-text-container">-->
-  <!--            <div class="h1-content">-->
-  <!--              <h1 style="padding-top: 30px;">Changes begin here!</h1>-->
-  <!--            </div>-->
-  <!--            <div class="paragraph-content">-->
-  <!--              <p>Start automating processes in your fitness club right now</p>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--          <div class="content-form-background">-->
-  <!--            <div class="content-form-container">-->
-  <!--              <form action="" method="post">-->
-  <!--                <div class="content-form-fields">-->
-  <!--                  <div class="form-group">-->
-  <!--                    <p class="content-text-">First Name</p>-->
-  <!--                    <input type="text" class="form-control form-control-lg">-->
-  <!--                  </div>-->
-  <!--                  <div class="form-group">-->
-  <!--                    <p class="content-text-">Last Name</p>-->
-  <!--                    <input type="text" name="lname" class="form-control form-control-lg">-->
-  <!--                  </div>-->
-  <!--                  <div class="form-group">-->
-  <!--                    <p class="content-text-">Email</p>-->
-  <!--                    <input type="email" name="email" class="form-control form-control-lg">-->
-  <!--                  </div>-->
-  <!--                </div>-->
-  <!--              </form>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--          <div class="content-centered-button-container">-->
-  <!--            <a class="link link-is-button theme-dark-background" data-component-name="link"-->
-  <!--               aria-label="Start Trial">-->
-  <!--            <span class="link-text" property="name">-->
-  <!--              Start Trial-->
-  <!--            </span>-->
-  <!--            </a>-->
-  <!--          </div>-->
-  <!--        </div>-->
-
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--    <footer class="footer">-->
-  <!--      <div class="header-background">-->
-  <!--        <div class="header-blocks-container">-->
-  <!--          <div class="header-elements-container">-->
-  <!--            <div class="logo-container">-->
-  <!--              <img src="resources/images/icon.png" height="70" alt="PrivateFitnessServices" style="color: black">-->
-  <!--            </div>-->
-  <!--            <div class="header-pfs">-->
-  <!--              <div>-->
-  <!--                <h1 class="h1-header">PFS</h1>-->
-  <!--              </div>-->
-  <!--            </div>-->
-  <!--            <div class="header-description-container">-->
-  <!--              <div class="header-description-elements-container">-->
-  <!--                <h2>Private Fitness Services</h2>-->
-  <!--                <h4>World's best choice for sport services</h4>-->
-  <!--              </div>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    </footer>-->
-  <!--  </div>-->
 </template>
 
 <script>

@@ -3,18 +3,18 @@
   <div class="w3-container pfs-form-page-container">
     <hr>
     <div class="w3-center h2-input-container">
-      <h2>Add subscription</h2>
+      <h2>Додати абонемент</h2>
     </div>
 
     <div v-if="users.length" class="w3-responsive w3-card-4">
       <table class="w3-table w3-striped w3-bordered">
         <thead>
         <tr class="w3-theme">
-          <th>Email</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Subscription</th>
-          <th>Confirm</th>
+          <th>Пошта</th>
+          <th>Імʼя</th>
+          <th>Прізвище</th>
+          <th>Абонемент</th>
+          <th>Підтвердити</th>
         </tr>
         </thead>
         <tbody ref="tableBody">
@@ -27,14 +27,14 @@
           </td>
           <td v-show="!user.remainingServicesCount">
             <select class="w3-select" name="group" ref="subscription" @change="setSubscriptionToUser(user, $event.target.value)">
-              <option style="display:none" selected>Select subscription</option>
+              <option style="display:none" selected>Обрати абонемент</option>
               <option v-for="subscription in subscriptions" :value="subscription.type" :selected="user.subscription === subscription.type">
                 {{subscription.type}} ( {{subscription.count}} )
               </option>
             </select>
           </td>
           <td style="text-align: left">
-            <button class="w3-button button-border-transition" style="padding: 2px 14px; font-size: 13px" @click="saveUserSubscription(user, idx)" :disabled="user.remainingServicesCount">Add</button>
+            <button class="w3-button button-border-transition" style="padding: 2px 14px; font-size: 13px" @click="saveUserSubscription(user, idx)" :disabled="user.remainingServicesCount">Додати</button>
           </td>
         </tr>
         </tbody>
@@ -43,7 +43,7 @@
 
     <div v-else style="text-align: center">
       <div style="font-size:100px">🤷</div>
-      There are no users for now.
+      немає користувачів на даний момент.
     </div>
   </div>
 </template>

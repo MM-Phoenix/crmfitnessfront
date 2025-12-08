@@ -12,9 +12,9 @@
 
   <ModalComponent :isOpen="modalOpened" @modal-close="closeModal" name="first-modal">
     <template #header>
-      <div v-show="!isDateSelectable()">Training info</div>
+      <div v-show="!isDateSelectable()">Інформація про заняття</div>
       <div v-show="isDateSelectable()">
-        {{ ScheduleService.isUserScheduledEvent(selectedEvent.id) ? 'Signed up' : 'Sign up training' }}
+        {{ ScheduleService.isUserScheduledEvent(selectedEvent.id) ? 'Записаний' : 'Записатися' }}
       </div>
     </template>
     <template #content>
@@ -24,17 +24,17 @@
       <div>{{ selectedEvent.trainer }}</div>
       <div>{{ selectedEvent.training }}</div>
 
-      <div>Registrations count: {{ selectedEvent.registrations.length }}</div>
+      <div>Кількість записів: {{ selectedEvent.registrations.length }}</div>
     </template>
     <template #footer>
-      <div v-if="isSubscriptionCountEmpty()">No season ticket available</div>
+      <div v-if="isSubscriptionCountEmpty()">Немає доступних послуг</div>
       <div v-else>
         <button class="fc-today-button" v-show="this.isDateSelectable(selectedEvent.start) &&
         !ScheduleService.isUserScheduledEvent(selectedEvent.id)" :disabled="isSubscriptionCountEmpty()"
-                @click="registerOnSchedule">{{ 'Sign up' }}
+                @click="registerOnSchedule">{{ 'Записатися' }}
         </button>
         <button class="fc-today-button" v-show="ScheduleService.isUserScheduledEvent(selectedEvent.id)" @click="unregisterOnSchedule">
-          {{ 'Cancel registration' }}
+          {{ 'Відмінити запис' }}
         </button>
       </div>
     </template>
@@ -51,7 +51,6 @@ import interactionPlugin from '@fullcalendar/interaction'
 import ModalComponent from "../ModalComponent";
 import UserAPI from "@/api/UserAPI";
 import ScheduleService from "@/services/schedule/ScheduleService";
-import AdminAPI from "@/api/AdminAPI";
 
 export default defineComponent({
   name: "Schedule",
@@ -62,6 +61,15 @@ export default defineComponent({
     return {
       eventGuid: 0,
       calendarOptions: {
+        locale: "uk",
+        allDayText: "Весь день",
+        buttonText: {
+          today: "Сьогодні",
+          month: "Місяць",
+          week: "Тиждень",
+          day: "День",
+          list: "Список"
+        },
         plugins: [
           dayGridPlugin,
           timeGridPlugin,

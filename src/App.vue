@@ -5,38 +5,38 @@
         <router-link to="/" v-bind:class="isCurrentPage('/')" class="w3-bar-item w3-button w3-wide">PFS</router-link>
         <div class="navbar-nav mr-auto">
           <li v-if="showCreateAdmin" class="nav-item">
-            <router-link to="/owner" v-bind:class="isCurrentPage('/owner')" class="w3-bar-item w3-button">ADD ADMIN</router-link>
+            <router-link to="/owner" v-bind:class="isCurrentPage('/owner')" class="w3-bar-item w3-button">ДОДАТИ АДМІНІСТРАТОРА</router-link>
           </li>
           <li v-if="showAdminBoard" class="nav-item">
-            <router-link to="/admin/trainer" v-bind:class="isCurrentPage('/admin/trainer')" class="w3-bar-item w3-button">ADD TRAINER</router-link>
+            <router-link to="/admin/trainer" v-bind:class="isCurrentPage('/admin/trainer')" class="w3-bar-item w3-button">ДОДАТИ ТРЕНЕРА</router-link>
           </li>
           <li v-if="showAdminBoard" class="nav-item">
-            <router-link to="/admin/client" v-bind:class="isCurrentPage('/admin/client')" class="w3-bar-item w3-button">ADD CLIENT</router-link>
+            <router-link to="/admin/client" v-bind:class="isCurrentPage('/admin/client')" class="w3-bar-item w3-button">ДОДАТИ КЛІЄНТА</router-link>
           </li>
           <li v-if="showAdminBoard" class="nav-item">
-            <router-link to="/admin/users" v-bind:class="isCurrentPage('/admin/users')" class="w3-bar-item w3-button">SUBSCRIPTIONS</router-link>
+            <router-link to="/admin/users" v-bind:class="isCurrentPage('/admin/users')" class="w3-bar-item w3-button">АБОНЕМЕНТИ</router-link>
           </li>
           <li v-if="showAdminBoard" class="nav-item">
-            <router-link to="/admin/schedule" v-bind:class="isCurrentPage('/admin/schedule')" class="w3-bar-item w3-button">SCHEDULE</router-link>
+            <router-link to="/admin/schedule" v-bind:class="isCurrentPage('/admin/schedule')" class="w3-bar-item w3-button">РОЗКЛАД</router-link>
           </li>
           <li v-if="showTrainerBoard" class="nav-item">
-            <router-link to="/trainer/schedule" v-bind:class="isCurrentPage('/trainer/schedule')" class="w3-bar-item w3-button">SCHEDULE</router-link>
+            <router-link to="/trainer/schedule" v-bind:class="isCurrentPage('/trainer/schedule')" class="w3-bar-item w3-button">РОЗКЛАД</router-link>
           </li>
           <li v-if="showUserBoard" class="nav-item">
-            <router-link to="/schedule" v-bind:class="isCurrentPage('/schedule')" class="w3-bar-item w3-button">SCHEDULE</router-link>
+            <router-link to="/schedule" v-bind:class="isCurrentPage('/schedule')" class="w3-bar-item w3-button">РОЗКЛАД</router-link>
           </li>
         </div>
         <div v-if="!currentUser" class="navbar-nav ml-auto">
           <li class="nav-item">
             <router-link to="/register" v-bind:class="isCurrentPage('/register')" class="w3-bar-item w3-button">
               <!--            <font-awesome-icon icon="user-plus"/>-->
-              SIGN UP
+              РЕЄСТРАЦІЯ
             </router-link>
           </li>
           <li v-if="!currentUser" class="nav-item">
             <router-link to="/login" v-bind:class="isCurrentPage('/login')" class="w3-bar-item w3-button">
               <!--            <font-awesome-icon icon="sign-in-alt"/>-->
-              SIGN IN
+              УВІЙТИ
             </router-link>
           </li>
         </div>
@@ -50,7 +50,7 @@
           <li class="nav-item" style="cursor: pointer">
             <a class="w3-bar-item w3-button" @click.prevent="logOut">
               <!--            <font-awesome-icon icon="sign-out-alt"/>-->
-              SIGN OUT
+              ВИЙТИ
             </a>
           </li>
         </div>
@@ -67,7 +67,7 @@
   <div v-show="showFooter" style="position: absolute; bottom: 0; width: 100%; height: 24.7vh">
     <footer v-show="showFooter" class="w3-center w3-black w3-padding-64" id="contact">
       <hr>
-      <p>Contact us</p>
+      <p>Звʼяжіться з нами</p>
 
       <div class="w3-xlarge w3-section">
         <a class="fa fa-phone w3-hover-opacity icon-link" href="tel:050-207-3879"></a>

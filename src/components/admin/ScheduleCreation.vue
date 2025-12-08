@@ -12,8 +12,8 @@
 
   <ModalComponent :isOpen="modalOpened" @modal-close="closeModal" @submit="createOrUpdateSchedule" name="first-modal">
     <template #header>
-      <div v-show="!isDateSelectable()">Training info</div>
-      <div v-show="isDateSelectable()">{{ selectedEvent.id ? 'Update' : 'Add training' }}</div>
+      <div v-show="!isDateSelectable()">Інформація про заняття</div>
+      <div v-show="isDateSelectable()">{{ selectedEvent.id ? 'Оновити' : 'Додати тренування' }}</div>
     </template>
     <template #content>
       <div><i class="fa fa-clock-o"></i> {{ getEventTime() }}</div>
@@ -21,14 +21,14 @@
 
       <div v-show="selectedEvent.id === '' || selectedEvent.edit">
         <select id="trainers" class="w3-select" v-model="selectedEvent.trainerId">
-          <option style="display:none" value="" selected>Select trainer</option>
+          <option style="display:none" value="" selected>Оберіть тренера</option>
           <option v-for="trainer in trainers" :value="trainer.id">
             {{ trainer.firstName }} {{ trainer.lastName }}
           </option>
         </select>
 
         <select id="trainings" class="w3-select" v-model="selectedEvent.trainingId">
-          <option style="display:none" value="" selected>Select training</option>
+          <option style="display:none" value="" selected>Оберіть заняття</option>
           <option v-for="training in trainings" :value="training.id">
             {{ training.name }}
           </option>
@@ -46,14 +46,14 @@
     </template>
     <template #footer>
       <div v-show="selectedEvent.id === '' || isDateSelectable()" style="justify-content: space-between; width: 90%;display: flex;">
-        <button class="fc-today-button" v-show="selectedEvent.id !== ''" @click="deleteSchedule">{{ 'Delete' }}</button>
+        <button class="fc-today-button" v-show="selectedEvent.id !== ''" @click="deleteSchedule">{{ 'Видалити' }}</button>
 
         <button class="fc-today-button" v-show="selectedEvent.id !== ''" @click="selectedEvent.edit = !selectedEvent.edit" >
-          {{ selectedEvent.edit ? 'Cancel' : 'Edit' }}
+          {{ selectedEvent.edit ? 'Відмінити' : 'Редагувати' }}
         </button>
 
         <button class="fc-today-button" :disabled="selectedEvent.id !== '' && !selectedEvent.edit" @click="createOrUpdateSchedule">
-          {{ selectedEvent.id ? 'Update' : 'Create' }}
+          {{ selectedEvent.id ? 'Оновити' : 'Створити' }}
         </button>
       </div>
     </template>
@@ -80,6 +80,15 @@ export default defineComponent({
     return {
       eventGuid: 0,
       calendarOptions: {
+        locale: "uk",
+        allDayText: "Весь день",
+        buttonText: {
+          today: "Сьогодні",
+          month: "Місяць",
+          week: "Тиждень",
+          day: "День",
+          list: "Список"
+        },
         plugins: [
           dayGridPlugin,
           timeGridPlugin,
@@ -219,11 +228,11 @@ export default defineComponent({
       }
     },
     getEventTime() {
-      return this.selectedEvent.startDate.toLocaleTimeString(navigator.language,
+      return this.selectedEvent.startDate.toLocaleTimeString('uk-UA',
           {weekday: 'short', hour: '2-digit', minute: '2-digit'});
     },
     getEventDate() {
-      return this.selectedEvent.startDate.toLocaleDateString(navigator.language,
+      return this.selectedEvent.startDate.toLocaleDateString('uk-UA',
           {month: 'short', day: 'numeric', year: 'numeric'});
     }
   },

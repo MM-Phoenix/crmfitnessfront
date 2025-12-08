@@ -5,7 +5,7 @@
       <div class="w3-container pfs-form-page-container">
         <hr>
         <div class="w3-center h2-input-container">
-          <h2>Sign up</h2>
+          <h2>Реєстрація</h2>
         </div>
         <UserForm ref="userForm"/>
       </div>
@@ -35,7 +35,7 @@ export default {
             userForm.setLoading(false);
 
             if (data.status === 200) {
-              userForm.setMessage("You have been registered", true);
+              userForm.setMessage("Ви зареєстровані", true);
 
               this.$store.dispatch("auth/login", user).then(
                   () => {
@@ -47,7 +47,7 @@ export default {
                   }
               );
             } else {
-              userForm.setMessage("Something wrong. Talk to admin.");
+              userForm.setMessage("Щось пішло не так. Зверніться до адміністратора.");
             }
           },
           (error) => {
